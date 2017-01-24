@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>My Registration Form</title>
+
+  </head>
+  <body>
+    <h1>
+      My Registration Form
+    </h1>
+
+    <form action="process.php" method="post">
+
+      <label for="first name">First Name</label>
+      <input type="text" id="first_name" name="first_name">
+
+      <br/>
+
+      <label for="last name">Last Name</label>
+      <input type="text" id="last_name" name="last_name">
+
+      <br/>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" name="email">
+
+      <br/>
+
+      <label for="password">Password</password>
+      <input type="password" id="password" name="password">
+
+      <br/>
+
+      <label for="pw_confirm">PW Confirm</password>
+      <input type="password" id="pw_confirm" name="pw_confirm">
+
+      <br/>
+
+      <label for="birthday">Birthday</date>
+      <input type="date" id="birthday" name="birthday">
+
+      <img id="icon" src="http://www.garner.k12.ia.us/sysimages/Calendar_scheduleHS.png" alt="calendar icon">
+
+      <br/>
+
+      <label for="Earthling">Earthling</label>
+      <input type="radio" id="Earthling" name="Earthling" value="Earthling">
+
+      <label for="Alien">Alien</label>
+      <input type="radio" id="Alien" name="Alien" value="Alien">
+
+      <label for="other">Outer-Dimesion</label>
+      <input type="radio" id="other" name="other" value="other">
+
+      <br/>
+
+      <p>A short description about yourself</p>
+      <textarea name="description"></textarea>
+
+      <br/>
+
+      <label for="fav_lang">Favorite Language</label>
+      <select name="fav_lang">
+        <option value="JavaScript">JavaScript</option>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+      </select>
+
+      <br/>
+
+      <input type="submit" value="Submit">
+
+    </form>
+
+  </body>
+</html>
