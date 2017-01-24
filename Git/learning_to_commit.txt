@@ -1,0 +1,35 @@
+cd ~
+mkdir test
+cd test/
+touch index.html style.css aboutMe.txt
+
+git init
+git status
+git add aboutMe.txt
+git commit -m "aboutMe.txt added"
+
+vim aboutMe.txt
+i
+:wq
+git status
+git add aboutMe.txt
+git commit -m "updated aboutMe"
+
+vim aboutMe.txt
+i
+:wq
+git status
+git add aboutMe.txt
+git commit -m "added favorite movie to aboutMe"
+
+git log
+git diff --stat 9a96b0b1c23afce6213da28fc6168e53bdf702f6
+
+git revert -n HEAD
+less aboutMe.txt
+vim aboutMe.txt
+i
+:wq
+git status
+git add aboutMe.txt
+git commit -m "re-added favorite movie to aboutMe"

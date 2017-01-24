@@ -1,0 +1,16 @@
+cd
+
+mkdir DojoAssignments
+
+cd DojoAssignments/
+mkdir WebFundamentals Python MEAN Ruby iOS netCore
+
+(manually move to each folder to create file using touch command)
+
+cd WebFundamentals/
+mkdir Git HTML CSS Javascript
+
+(manually move to each folder to create file using touch command)
+
+cd HTML
+touch indentation.html

@@ -1,0 +1,24 @@
+cd
+
+mkdir test
+
+cd test
+touch index.html styles.css commands.txt
+
+cp index.html index_2.html
+
+rm styles.css
+
+cd
+mkdir destination
+
+cd test
+mv index_2.html /C/Users/pmann/destination
+
+cd test
+ll
+cd
+cd destination
+ll
+
+rm -rf destination
