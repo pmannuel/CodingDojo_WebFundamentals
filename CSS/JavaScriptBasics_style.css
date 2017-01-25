@@ -82,4 +82,5 @@ div:not(#wrapper){
  padding: 15px;
  display: block;
  border-radius: 15px;
+ margin-top: 20px;
 }
