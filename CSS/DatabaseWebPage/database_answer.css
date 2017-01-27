@@ -1,0 +1,123 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+#container {
+  margin: 0 auto;
+  padding: 10px;
+  height: 1000px;
+  width: 1200px;
+}
+#nav {
+  width: 1200px;
+  background: linear-gradient(#EFF1ED, #FFFFFF, #FFFFFF);
+}
+#nav img {
+  margin-left: 10px;
+  height: 100px;
+  width: 200px;
+}
+#nav h2 {
+  margin-left: 500px;
+  margin-top: 50px;
+  display: inline-block;
+  vertical-align: top;
+}
+#nav li {
+  display: inline-block;
+  padding: 10px 50px;
+  border-right: 1px solid black;
+}
+#nav ul {
+  border: 1px solid black;
+  background: linear-gradient(#FFFFFF, #EFF1ED, #FFFFFF)
+}
+#nav a {
+  text-decoration: none;
+  color: #2F323A;
+}
+#content {
+  width: 1160px;
+  padding: 20px;
+  background: radial-gradient(#757083, #2F323A,#020202);
+}
+#content img:first-child {
+  height: 300px;
+  width: 600px;
+  border: 10px solid silver;
+}
+#icon {
+  height: 15px;
+  width: 15px;
+  margin: 5px 0px 5px 980px;
+}
+#content h6 {
+  display: inline-block;
+  color: #577399;
+  vertical-align: top;
+  margin: 5px;
+}
+#about {
+  display: inline-block;
+  height: 320px;
+  width: 500px;
+  vertical-align: top;
+  margin-left: 20px;
+}
+#about {
+  background: linear-gradient(to right, #F2FDFF, #DBCBD8);
+}
+#about h3 {
+  background:linear-gradient(#757083,#D0CCD0);
+  padding: 10px;
+  color: black;
+}
+#about h4, p {
+  padding: 10px;
+}
+#content > .boxes {
+  margin: 0px;
+  background: linear-gradient(#577399, #FFFFFF);
+  height: 520px;
+  width: 270px;
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid silver;
+}
+#content > .boxes ~ .boxes {
+  background: linear-gradient(#577399, #FFFFFF);
+  height: 520px;
+  width: 270px;
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 13px;
+  border: 2px solid silver;
+}
+
+.boxes h3 {
+  background:linear-gradient(#757083,#D0CCD0);
+  padding: 10px;
+  color: black;
+}
+.boxes img {
+  width: 270px;
+  height: 150px;
+}
+.boxes p {
+  height: 280px;
+}
+button {
+	box-shadow: 0px 10px 14px -7px #1A090D;
+	background-color: #577399;
+	border-radius:8px;
+  border: 5px solid #1A090D;
+	display:inline-block;
+	color:#ffffff;
+	font-size:10px;
+	font-weight:bold;
+	padding:5px 10px;
+	text-shadow:0px 1px 0px #577399;
+  margin-left: 140px;
+  margin-top: -30px;
+  vertical-align: top;
+}
