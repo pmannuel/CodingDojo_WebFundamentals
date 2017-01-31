@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="users_style.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            //Callback Method
+            // function attach_handlers()
+            // {
+            //     $("td.new").addClass("recenter");
+            // }
+            // .on() Method
+            // $(document).on($("td.new").addclass(".recenter"));
+            
+            $('button').click(function(){
+                var firstname_in = $('#firstname_in').val();
+                var lastname_in = $('#lastname_in').val();
+                var email_in = $('#email_in').val();
+                var contact_in = $('#contact_in').val();
+
+                $("table.new_user_entry").append("<tr> <td class='new'>" + firstname_in + "</td> <td class='new'>" + lastname_in + "</td> <td class='new'>" + email_in + "</td> <td class='new'>" + contact_in + "</td> </tr>");
+
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="form">
+            <h1>Add User</h1>
+            <table>
+                    <tr>
+                        <td>First Name:</td>
+                        <td><input id="firstname_in" type='text' name='first_name' placeholder="First Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name:</td>
+                        <td><input id="lastname_in" type='text' name='last_name' placeholder="Last Name"></td>
+                    </tr>
+                    <tr>
+                        <td>Email Address:</td>
+                        <td><input id="email_in" type='text' name='email_address' placeholder="Email Address"></td>
+                    </tr>
+                    <tr>
+                        <td>Contact No.:</td>
+                        <td><input id="contact_in" type='text' name='phone_number' placeholder="Phone #"></td>
+                    </tr>
+            </table>
+            <button type="submit" name="add_user">Add User</button>
+        </div>
+        <div class="userlist">
+            <table class="new_user_entry">
+                <tr class="table_heading">
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Email Address</th>
+                    <th>Contact #</th>
+                </tr>
+                <!-- append here -->
+            </table>
+            <!-- <table class="new_user_entry">
+            </table> -->
+        </div>
+    </div>
+</body>
+
+</html>

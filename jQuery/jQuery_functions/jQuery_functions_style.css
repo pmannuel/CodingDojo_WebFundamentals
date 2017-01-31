@@ -1,0 +1,38 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     /*outline: 1px solid yellow;*/
+}
+
+#wrapper{
+    margin: 0px auto;
+    background-color: none;
+    width:1000px;
+}
+
+button{
+    display: inline-block;
+    vertical-align: bottom;
+    margin: 10px;
+}
+
+.heading{
+    display: inline-block;
+    padding: 10px;
+}
+
+h3{
+    margin-top: 10px;
+}
+
+#addclass, #slidetoggle, #append{
+    border-bottom: 1px solid black;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+#slidetoggle img{
+    display: block;
+    margin: 0 auto;
+}

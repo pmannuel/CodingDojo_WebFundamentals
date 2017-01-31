@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="jQuery_functions_style.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#addclass button').click(function() {
+                $('#addclass h3').css('color', 'red');
+            });
+            $('#slidetoggle button').click(function() {
+                $('#slidetoggle img').slideToggle("slow", function() { //options: .hide .toggle .slideUp .slideDown
+                    //Animation complete.
+                });
+            });
+            $('#append button').click(function() {
+                $('#appendme').append('<p>A whole new world!</p>');
+            });
+        });
+    </script>
+    <title>My jQuery basic assignment!</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="addclass">
+            <button>AddClass</button>
+            <div class="heading">
+                <h1>AddClass</h1>
+                <h3>Click the button to add class 'red' to this paragraph</h3>
+            </div>
+        </div>
+        <div id="slidetoggle">
+            <button>Slidetoggle</button>
+            <div class="heading">
+                <h1>Slidetoggle</h1>
+                <h3>Click the button to slidetoggle a hidden image</h3>
+            </div>
+            <img src="hithere.gif" alt="">
+        </div>
+        <div id="append">
+            <button>Append</button>
+            <div class="heading">
+                <h1>Append</h1>
+                <h3>Click the button to append a new paragraph!</h3>
+                <div id="appendme"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

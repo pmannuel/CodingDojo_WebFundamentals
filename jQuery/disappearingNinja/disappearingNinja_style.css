@@ -1,0 +1,36 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     /*outline: 1px solid yellow;*/
+}
+
+#wrapper{
+    margin: 0px auto;
+    background-color: none;
+    width:1000px;
+    text-align: center;
+}
+
+#images{
+    height: 600px;
+    width: 1000px;
+    display: block;
+}
+
+li{
+    display: inline-block;
+    text-decoration: none;
+}
+
+img{
+    height: 250px;
+    width: 250px;
+    margin: 30px;
+}
+
+button{
+    height: 50px;
+    width: 100px;
+    margin-top: 10px;
+}

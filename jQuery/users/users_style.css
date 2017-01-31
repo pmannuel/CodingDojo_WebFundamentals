@@ -1,0 +1,51 @@
+/**********Normalization**********/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    /*outline: 1px solid yellow;*/
+}
+
+#wrapper {
+    margin: 0px auto;
+    width: 1000px;
+    height: 1000px;
+    background-color: #A9F0CE;
+    text-align: center;
+}
+
+div.userlist th{
+    padding: 5px 10px;
+}
+
+/*.recenter{
+    padding: 5px 10px;
+}*/
+
+.new{
+    text-align: center;
+}
+
+h1 {
+    display: block;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid black;
+}
+
+div.form tr td {
+    text-align: right;
+}
+
+input{
+    margin-left: 7px;
+}
+
+table {
+    margin: 0px auto;
+}
+
+button{
+    margin: 10px 0px;
+}

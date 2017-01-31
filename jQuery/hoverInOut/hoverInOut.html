@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hover In and Out</title>
+    <link rel="stylesheet" type="text/css" href="hoverInOut.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#ninja0").hover(function() {
+                $(this).attr("src", "cat0.png")
+            }, function() {
+                $(this).attr("src", "ninja0.png")
+            })
+            $("#ninja1").hover(function() {
+                $(this).attr("src", "cat1.png")
+            }, function() {
+                $(this).attr("src", "ninja1.png")
+            })
+            $("#ninja2").hover(function() {
+                $(this).attr("src", "cat2.png")
+            }, function() {
+                $(this).attr("src", "ninja2.png")
+            })
+            $("#ninja3").hover(function() {
+                $(this).attr("src", "cat3.png")
+            }, function() {
+                $(this).attr("src", "ninja3.png")
+            })
+            $("#ninja4").hover(function() {
+                $(this).attr("src", "cat4.png")
+            }, function() {
+                $(this).attr("src", "ninja4.png")
+            })
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <img id="ninja0" src="ninja0.png" alt="" />
+        <img id="ninja1" src="ninja1.png" alt="" />
+        <img id="ninja2" src="ninja2.png" alt="" />
+        <img id="ninja3" src="ninja3.png" alt="" />
+        <img id="ninja4" src="ninja4.png" alt="" />
+    </div>
+</body>
+
+</html>
