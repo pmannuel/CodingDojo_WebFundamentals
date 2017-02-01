@@ -1,0 +1,73 @@
+/**********Normalization**********/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: 1px solid yellow;
+}
+
+#wrapper {
+    margin: 0px auto;
+    width: 1000px;
+    height: 700px;
+    background-color: #A9F0CE;
+    padding: 50px;
+}
+
+div.form{
+    display: inline-block;
+    width: 50%;
+    vertical-align: top;
+}
+
+#firstname_in, #lastname_in{
+    height: 20px;
+    margin: 5px 0px;
+}
+
+#description_in{
+    height: 75px;
+    width: 205px;
+    margin: 5px 0px;
+    text-align: center;
+}
+
+div.form h1{
+    margin-bottom: 10px;
+}
+
+div.form button{
+    display: block;
+    height: 30px;
+    width: 100px;
+}
+
+/******************************************************************************/
+
+div.contactcards{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+}
+
+div.card{
+    background-color: pink;
+    height: 150px;
+    width: 400px;
+    margin-bottom: 10px;
+    padding: 25px;
+}
+
+div.card h1{
+    font-size: 50px;
+}
+
+p.contactcards{
+    display: block;
+    margin-top: 20px;
+}
+
+div.card p.pop_description{
+    text-align: justify;
+    font-size: 25px;
+}

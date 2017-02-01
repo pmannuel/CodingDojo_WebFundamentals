@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Users</title>
+    <link rel="stylesheet" type="text/css" href="contactCard.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            //Callback Method
+            // function attach_handlers()
+            // {
+            //     $("td.new").addClass("recenter");
+            // }
+            // .on() Method
+            // $(document).on($("td.new").addclass(".recenter"));
+
+            $('button').click(function() {
+                var firstname_in = $('#firstname_in').val();
+                var lastname_in = $('#lastname_in').val();
+                var description_in = $('#description_in').val();
+
+                $("div.contactcards").append(
+                    "<div class='card'><h1>" + firstname_in + " " + lastname_in + "</h1><p class='contactcards'>Click for Description!</p></div>"
+                );
+
+                function attach_handlers() {
+                    $("div.card p.contactcards").click(function() {
+                        $("div.card").html("<p class='pop_description'>" + description_in + "</p>");
+                    });
+                };
+
+                attach_handlers();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="form">
+            <h1>Add User</h1>
+            <table>
+                <tr>
+                    <td>First Name:</td>
+                    <td><input id="firstname_in" type='text' name='first_name' placeholder="First Name"></td>
+                </tr>
+                <tr>
+                    <td>Last Name:</td>
+                    <td><input id="lastname_in" type='text' name='last_name' placeholder="Last Name"></td>
+                </tr>
+                <tr>
+                    <td>Description:</td>
+                </tr>
+            </table>
+            <input id="description_in" type='text' name='description' placeholder="Enter description">
+            <button type="submit" name="add_user">Add User</button>
+        </div>
+        <div class="contactcards">
+            <!-- Append new contact cards here -->
+        </div>
+    </div>
+</body>
+
+</html>
