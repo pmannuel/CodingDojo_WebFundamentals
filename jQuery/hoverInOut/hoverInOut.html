@@ -11,42 +11,35 @@
     <script type="text/javascript">
         $(document).ready(function() {
 
-            $("#ninja0").hover(function() {
-                $(this).attr("src", "cat0.png")
+            $('img').hover(function(){
+                $(this).attr("src", $(this).attr('data-alt-src'))
             }, function() {
-                $(this).attr("src", "ninja0.png")
-            })
-            $("#ninja1").hover(function() {
-                $(this).attr("src", "cat1.png")
+                $(this).attr("src", $(this).attr('ori-src'))
+            });
+
+            $('img').hover(function(){
+                $(this).attr("src", $(this).attr('data-alt-src'))
             }, function() {
-                $(this).attr("src", "ninja1.png")
-            })
-            $("#ninja2").hover(function() {
-                $(this).attr("src", "cat2.png")
+                $(this).attr("src", $(this).attr('src'))
+            });
+
+            $('img').hover(function(){
+                $(this).attr("src", $(this).attr('data-alt-src'))
             }, function() {
-                $(this).attr("src", "ninja2.png")
-            })
-            $("#ninja3").hover(function() {
-                $(this).attr("src", "cat3.png")
-            }, function() {
-                $(this).attr("src", "ninja3.png")
-            })
-            $("#ninja4").hover(function() {
-                $(this).attr("src", "cat4.png")
-            }, function() {
-                $(this).attr("src", "ninja4.png")
-            })
+                $(this).attr("src", 'src')
+            });
+
         });
     </script>
 </head>
 
 <body>
     <div id="wrapper">
-        <img id="ninja0" src="ninja0.png" alt="" />
-        <img id="ninja1" src="ninja1.png" alt="" />
-        <img id="ninja2" src="ninja2.png" alt="" />
-        <img id="ninja3" src="ninja3.png" alt="" />
-        <img id="ninja4" src="ninja4.png" alt="" />
+        <img id="ninja0" src="ninja0.png" ori-src="ninja0.png" data-alt-src="cat0.png" />
+        <img id="ninja1" src="ninja1.png" ori-src="ninja1.png" data-alt-src="cat1.png" />
+        <img id="ninja2" src="ninja2.png" ori-src="ninja2.png" data-alt-src="cat2.png" />
+        <img id="ninja3" src="ninja3.png" ori-src="ninja3.png" data-alt-src="cat3.png" />
+        <img id="ninja4" src="ninja4.png" ori-src="ninja4.png" data-alt-src="cat4.png" />
     </div>
 </body>
 
