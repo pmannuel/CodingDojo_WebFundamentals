@@ -39,6 +39,11 @@ div.info{
     text-align: left;
 }
 
+h1.opening{
+    text-align: center;
+    margin-top: 180px;
+}
+
 h1.info{
     text-align: center;
 }
