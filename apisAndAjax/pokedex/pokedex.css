@@ -1,0 +1,110 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     /*outline: 1px solid red;*/
+}
+
+#wrapper{
+    display: flex;
+    justify-content: space-around;
+    /*margin: 0px 10px;*/
+    width: 100%;
+    position: relative;
+    /*padding: 60px;*/
+    height: 100vh;
+    background-image: url(sky.png);
+    background-repeat: repeat;
+    overflow-y: hidden;
+}
+
+#poke_icon{
+    min-width: 100px;
+    width: 70%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-image: url(grassfortowns.png);
+    background-repeat: repeat;
+    border: 5px solid black;
+    overflow-y: scroll;
+    margin: 70px;
+}
+
+audio{
+    display: none;
+}
+
+div.listbox{
+    width: 150px;
+    height: 150px;
+    text-align: center;
+}
+
+div.listbox img.pokemon{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+div.listbox:hover{
+    cursor: pointer;
+    background-image: url(Pokeball.PNG);
+    background-size: 150px;
+}
+
+/********************POKEDEX********************/
+
+#pokedex{
+    width: 305px;
+    height: 470px;
+    /*float: right;*/
+    background-color: white;
+    padding: 30px;
+    border: 30px solid red;
+    margin-top: 70px;
+    margin-right: 72px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 5px 5px 5px grey;
+}
+
+#name_info{
+    display: block;
+    height: 50px;
+    text-align: center;
+    background-color: #C4CFD1;
+}
+
+#div_image_info{
+    display: flex;
+    justify-content: center;
+    height: 120px;
+    background-color: #C4CFD1;
+}
+
+/*#img_info{
+    max-height: 150px;
+}*/
+
+#type_info{
+    display: block;
+    height: 100px;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+#type_info li{
+    margin-left: 25px;
+    text-decoration: none;
+}
+
+#height_info, #weight_info{
+    display: block;
+    height: 50px;
+    text-align: justify;
+}
+
+#weight_info{
+    margin-bottom: 550px;
+}

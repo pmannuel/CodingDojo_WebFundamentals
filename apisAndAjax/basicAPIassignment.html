@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Assignment: Pokemon</title>
+    <meta name="description" content="Create a website that has all the pictures of the original Pokemon (Pokemon #1 ~ Pokemon #151). Use the PokeAPI to get the images. You can find the image of the first Pokemon on  http://pokeapi.co/media/img/1.png, second Pokemon on http://pokeapi.co/media/img/2.png, third Pokemon on http://pokeapi.co/media/img/3.png, and so on. (Copy and paste those URLs. Hotlinking has been prohibited by pokeapi.)">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        //javascript
+
+        $(document).ready(function() {
+
+            for( var i=2; i<=151; i++){
+                $("#wrapper").append("<img src='http://pokeapi.co/media/img/" + i + ".png' alt='bulbasaur'>");
+            }
+        });
+
+    </script>
+    <style type="text/css">
+        #wrapper{
+            width: 1000px;
+            margin: 0px auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Who's that Pokemon?</title>
+    <link rel="stylesheet" type="text/css" href="pokedex.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <!-- <script src="js/stickySidebar.js"></script> -->
+    <script type="text/javascript">
+
+        $(document).ready(function() {
+
+            // $('#pokedex').stickySidebar();
+
+            for (var i = 1; i <= 151; i++) {
+                var new_pokemon_icon = "<div class='listbox'><img class='pokemon' id='" + i + "' src='http://pokeapi.co/media/img/" + i + ".png' alt=''></div>"
+                console.log(new_pokemon_icon);
+                $("#poke_icon").append(new_pokemon_icon);
+            }
+
+            $("img.pokemon").click(function() {
+                console.log("clicked the poke icon");
+
+                var index = this.id;
+                // console.log(index);
+
+                var pokemon_api = "http://pokeapi.co/api/v1/pokemon/" + index + "/";
+
+                $.get(pokemon_api, function(data) {
+                    console.log("I am retrieving the pokemon api index: " + index);
+                    console.log(data);
+
+                    //    Adding Name of Pokemon     //
+                    var name_str = data.name;
+                    console.log(name_str);
+                    $("#name_info").html(name_str);
+
+                    //    Changing picture of Pokemon     //
+                    var img_str = "http://pokeapi.co/media/img/" + index + ".png";
+                    $("#img_info").attr("src", img_str);
+
+                    //    Adding Type of Pokemon     //
+                    var type_str = "";
+                    type_str += "<h3>Types</h3>";
+                    type_str += "<ul>";
+                    for (var i = 0; i < data.types.length; i++) {
+                        type_str += "<li>" + data.types[i].name + "</li>";
+                    }
+                    type_str += "</ul>";
+                    $("#type_info").html(type_str);
+
+                    //    Adding Height of Pokemon     //
+                    var height_str = "";
+                    height_str = "<h3>Height</h3><ul>" + data.height[0] + "</li></ul>";
+                    $("#height_info").html(height_str);
+
+                    //    Adding Weight of Pokemon     //
+                    var weight_str = "";
+                    weight_str = "<h3>Weight</h3><ul>" + data.weight[0] + "</li></ul>";
+                    $("#weight_info").html(weight_str);
+
+                }, "json");
+
+            }); //end of ("#pokemon_img").click
+        }); //end of (document).ready
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <audio controls autoplay loop>
+          <source src="audio.mp3" type="audio/mp3">
+        </audio>
+        <div id="poke_icon">
+        </div>
+        <div id="pokedex">
+            <h1 id="name_info">Who's that Pokémon?</h1>
+            <div id="div_image_info"><img id="img_info" src="" alt=""></div>
+            <div id="type_info">
+                <h3>Types</h3></div>
+            <div id="height_info">
+                <h3>Height</h3></div>
+            <div id="weight_info">
+                <h3>Weight</h3>
+            </div>
+            <img src="http://orig03.deviantart.net/7471/f/2012/220/d/5/pokemon_yellow_character_and_pikachu_sprites_by_eri_tchi-d4moyx2.png" alt="" height="100px">
+        </div>
+    </div>
+</body>
+
+</html>
