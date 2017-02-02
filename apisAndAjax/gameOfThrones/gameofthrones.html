@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Game of Thrones</title>
+    <style type="text/css">
+        body,
+        a:hover {
+            cursor: url(http://cur.cursors-4u.net/sports/spo-1/spo15.cur), progress !important;
+        }
+    </style>
+    <a href="http://www.cursors-4u.com/cursor/2005/05/08/spo15-11.html" target="_blank" title="Sword"><img src="http://cur.cursors-4u.net/cursor.png" border="0" alt="Sword" style="position:absolute; top: 0px; right: 0px;" /></a>
+    <link href="https://fonts.googleapis.com/css?family=Cinzel+Decorative" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="gameofthrones.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('div.flags img').hover(function() {
+                    $('#wrapper').css('background-image', $(this).attr('background-src'))
+                    var id = $(this).attr('id')
+                    var house_api = "http://www.anapioficeandfire.com/api/houses/" + $(this).attr('alt')
+
+                    $.get(house_api, function(data) {
+                        console.log(data);
+
+                        var titles_str = "";
+                        var titles_l = data.titles.length;
+
+                        for (var i = 0; i < titles_l; i++) {
+                            titles_str += data.titles[i];
+                            if (titles_l > 1 && i < titles_l - 1) {
+                                titles_str += ", ";
+                            }
+                        };
+
+                        $('div.info').html(`
+                        <h1 class="info">` + data.name + `</h1>
+                        <div class="img_info"><img src="`+ id +`.png" alt=""></div>
+                        <h2 class="info">Words:` + data.words +`</h2>
+                        <h2 class="info">Titles:` + titles_str + `</h2>
+                        `);
+
+                    }, "json");
+                },
+                function() {
+                    $('#wrapper').css('background-image', 'url(main_back.jpg)')
+                    $('div.info').html('')
+                }
+            );
+
+            $('div.flags img').click(function() {}); // end of (img).click
+        }); //end of (document).ready
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="flags">
+            <img class="flags" id="lannister" src="lannister.png" background-src="url(lannister_back.jpg)" alt="229">
+            <img class="flags" id="stark" src="stark.png" background-src="url(stark_back.jpg)" alt="362">
+            <img class="flags" id="targaryen" src="targaryen.png" background-src="url(targaryen_back.jpg)" alt="378">
+            <img class="flags" id="baratheon" src="baratheon.png" background-src="url(baratheon_back.jpg)" alt="15">
+        </div>
+        <div class="info">
+        </div>
+    </div>
+</body>
+
+</html>

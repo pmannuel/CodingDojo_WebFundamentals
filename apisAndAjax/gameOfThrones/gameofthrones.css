@@ -1,0 +1,61 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     font-family: 'Cinzel Decorative', cursive;
+     /*outline: 1px solid red;*/
+}
+
+#wrapper{
+    padding-top: 60px;
+    margin: 0px auto;
+    width: 1500px;
+    height: 900px;
+    background-image: url(main_back.jpg);
+    background-size: auto 960px;
+    background-repeat: no-repeat;
+}
+
+div.flags{
+    display: flex;
+    justify-content: space-around;
+    background: linear-gradient(#565656, #838381, #565656);
+    height: 30px;
+    width: 100%;
+}
+
+div.flags img{
+    height: 200px;
+    width: 170px;
+}
+
+div.info{
+    display: block;
+    height: 400px;
+    margin: 195px 300px;
+    padding: 30px 60px;
+    background-color: white;
+    border: 10px solid #565656;
+    text-align: left;
+}
+
+h1.info{
+    text-align: center;
+}
+
+div.img_info{
+    display: block;
+    text-align: center;
+}
+
+div.img_info img{
+    height: 100px;
+    width: auto;
+    margin-top: 10px;
+}
+
+h2.info{
+    font-size: 30px;
+    margin: 10px 0px 50px 0px;
+    font-weight: 100;
+}

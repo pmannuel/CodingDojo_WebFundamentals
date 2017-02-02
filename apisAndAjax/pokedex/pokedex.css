@@ -2,7 +2,7 @@
 *{
      margin: 0px;
      padding: 0px;
-     /*outline: 1px solid red;*/
+     outline: 1px solid red;
 }
 
 #wrapper{
@@ -106,5 +106,5 @@ div.listbox:hover{
 }
 
 #weight_info{
-    margin-bottom: 550px;
+    margin-bottom: 10px;
 }
