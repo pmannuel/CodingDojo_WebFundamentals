@@ -64,3 +64,7 @@ h2.info{
     margin: 10px 0px 50px 0px;
     font-weight: 100;
 }
+
+audio{
+    display: none;
+}

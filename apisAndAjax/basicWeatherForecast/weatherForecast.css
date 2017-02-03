@@ -1,0 +1,21 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     /*outline: 1px solid red;*/
+}
+
+#wrapper{
+    text-align: center;
+    padding: 60px;
+    margin: 0px auto;
+    background: pink;
+}
+
+#console #output{
+    width: 100%;
+}
+
+h1, h3{
+    margin: 10px 0px;
+}

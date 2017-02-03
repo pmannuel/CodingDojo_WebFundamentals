@@ -19,21 +19,31 @@
             // }
             // .on() Method
             // $(document).on($("td.new").addclass(".recenter"));
+            var counter = 0;
 
             $('button').click(function() {
+                var i = i+1;
                 var firstname_in = $('#firstname_in').val();
                 var lastname_in = $('#lastname_in').val();
                 var description_in = $('#description_in').val();
 
                 $("div.contactcards").append(
-                    "<div class='card'><h1>" + firstname_in + " " + lastname_in + "</h1><p class='contactcards'>Click for Description!</p></div>"
+                    "<div class='card'><h1>" + firstname_in + " " + lastname_in + "</h1><p id='card"+ counter++ +"'class='contactcards'>Click for Description!</p></div>"
                 );
 
                 function attach_handlers() {
                     $("div.card p.contactcards").click(function() {
-                        $("div.card").html("<p class='pop_description'>" + description_in + "</p>");
+                        var id = $(this).attr('id')
+                        var html_para = "#" + id
+                        $(html_para).parent().html("<p class='pop_description'>" + description_in + "</p>");
                     });
                 };
+
+
+
+
+
+
 
                 attach_handlers();
             });

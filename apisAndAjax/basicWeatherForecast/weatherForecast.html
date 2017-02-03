@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Your Very Own Weather Forecast</title>
+    <style type="text/css">
+
+    </style>
+    <link rel="stylesheet" type="text/css" href="weatherForecast.css">
+    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('form').submit(function(event) {
+                var input = $('form:input');
+                var url = "http://api.openweathermap.org/data/2.5/weather?q=" + input;
+                $.get(url, function(res) {
+                    var temp = res.temp;
+                    $('#output').html(`
+                        <h1>` + input + `</h1>
+                        <h3>Temperature: ` + temp + `</h3>
+                    `)
+                }, 'json');
+                event.preventDefault();
+                return false; // don't forget to return false so the page doesn't refresh
+            });
+        }); //end of (document).ready
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <form id="console">
+            <input type="text" name="searchbar" placeholder="city">
+            <input type="submit" name="submitbutton" value="Search Weather"></input>
+        </form>
+        <div id="output">
+            <h1>City</h1>
+            <h3>Temperature: 64</h3>
+        </div>
+    </div>
+</body>
+
+</html>

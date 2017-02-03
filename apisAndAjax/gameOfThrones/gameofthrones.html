@@ -48,7 +48,7 @@
                 },
                 function() {
                     $('#wrapper').css('background-image', 'url(main_back.jpg)')
-                    $('div.info').html('<h1 class="opening">Main 4 Houses of Game of Thrones</h1>')
+                    $('div.info').html('<h1 class="opening">When you play the game of thrones,<br />you win or you die.</h1>')
                 }
             );
 
@@ -59,6 +59,9 @@
 
 <body>
     <div id="wrapper">
+        <audio controls autoplay loop>
+          <source src="audio.mp3" type="audio/mp3">
+        </audio>
         <div class="flags">
             <img class="flags" id="lannister" src="lannister.png" background-src="url(lannister_back.jpg)" alt="229">
             <img class="flags" id="stark" src="stark.png" background-src="url(stark_back.jpg)" alt="362">
@@ -66,7 +69,7 @@
             <img class="flags" id="baratheon" src="baratheon.png" background-src="url(baratheon_back.jpg)" alt="15">
         </div>
         <div class="info">
-            <h1 class="opening">Main 4 Houses of Game of Thrones</h1>
+            <h1 class="opening">When you play the game of thrones,<br />you win or you die.</h1>
         </div>
     </div>
 </body>

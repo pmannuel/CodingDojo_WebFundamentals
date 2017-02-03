@@ -3,10 +3,12 @@
 * {
     margin: 0px;
     padding: 0px;
-    outline: 1px solid yellow;
+    /*outline: 1px solid yellow;*/
 }
 
 #wrapper {
+    display: flex;
+    justify-content: space-around;
     margin: 0px auto;
     width: 1000px;
     height: 700px;
@@ -16,8 +18,11 @@
 
 div.form{
     display: inline-block;
-    width: 50%;
     vertical-align: top;
+    height: 270px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 30px;
 }
 
 #firstname_in, #lastname_in{
@@ -46,8 +51,11 @@ div.form button{
 
 div.contactcards{
     display: inline-block;
+    width: 500px;
+    height: 600px;
     text-align: center;
     vertical-align: top;
+    overflow-y: scroll;
 }
 
 div.card{
