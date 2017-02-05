@@ -1,47 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Your Very Own Weather Forecast</title>
-    <style type="text/css">
-
+    <meta charset="utf-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+    <style>
+        #display{
+            font-size: 30px;
+        }
+        *{
+            font-family: 'Roboto Slab', serif;
+        }
     </style>
-    <link rel="stylesheet" type="text/css" href="weatherForecast.css">
-    <script type="text/javascript" src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
-    <script type="text/javascript">
-        $(document).ready(function() {
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("form").submit(function() {
+                // your code here (build up your url)
+                var link = 'http://api.openweathermap.org/data/2.5/weather?q=';
+                link += $("#form").val();
+                link += '&units=imperial';
+                link += '&APPID=1036307d2c19ff4857f8f37a3f0c0893';
+                $.get(link, function(res) {
+                    // your code here
+                    var content = '<div id="main"><p>City: ';
+                    content += res.name;
+                    content += '</p><p>Temperature: ';
+                    content += res.main.temp;
+                    content += ' Fahrenheit</p></div>';
 
-            $('form').submit(function(event) {
-                var input = $('form:input');
-                var url = "http://api.openweathermap.org/data/2.5/weather?q=" + input;
-                $.get(url, function(res) {
-                    var temp = res.temp;
-                    $('#output').html(`
-                        <h1>` + input + `</h1>
-                        <h3>Temperature: ` + temp + `</h3>
-                    `)
+                    $("#display").html(content);
                 }, 'json');
-                event.preventDefault();
-                return false; // don't forget to return false so the page doesn't refresh
+                // don't forget to return false so the page doesn't refresh
+                return false;
             });
-        }); //end of (document).ready
+        });
     </script>
 </head>
 
 <body>
-    <div id="wrapper">
-        <form id="console">
-            <input type="text" name="searchbar" placeholder="city">
-            <input type="submit" name="submitbutton" value="Search Weather"></input>
+    <h1>The Weather APP</h1>
+    <div id="header">
+        <form>
+            <input type="text" name="city" id="form"/>
+            <input type="submit" value="Search Weather" id="button" />
         </form>
-        <div id="output">
-            <h1>City</h1>
-            <h3>Temperature: 64</h3>
-        </div>
+    </div>
+    <div id="display">
+
     </div>
 </body>
 
-</html>
+</html

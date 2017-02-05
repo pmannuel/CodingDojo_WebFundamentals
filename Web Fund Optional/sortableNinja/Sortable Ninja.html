@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sortable Ninja</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <style>
+        * {
+            outline: 1px solid red;
+        }
+
+        #wrapper {
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        #sortable {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            width: 60%;
+        }
+
+        #sortable li {
+            padding-left: 1.5em;
+            font-size: 1.4em;
+            display: flex;
+            justify-content: center;
+            /*text-align: center;*/
+        }
+
+        #sortable li span {
+            position: absolute;
+            margin-left: -1.3em;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(function() {
+                $("#sortable").sortable();
+                $("#sortable").disableSelection();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <ul id="sortable">
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img id="ninja0" src="ninja0.png" /></li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img id="ninja0" src="ninja1.png" /></li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img id="ninja0" src="ninja2.png" /></li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img id="ninja0" src="ninja3.png" /></li>
+            <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span><img id="ninja0" src="ninja4.png" /></li>
+        </ul>
+    </div>
+</body>
+
+</html>

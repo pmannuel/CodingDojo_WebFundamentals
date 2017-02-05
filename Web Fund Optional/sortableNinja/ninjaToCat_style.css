@@ -1,0 +1,22 @@
+/**********Normalization**********/
+*{
+     margin: 0px;
+     padding: 0px;
+     outline: 1px solid yellow
+}
+
+#wrapper{
+    margin: 0px auto;
+    background-color: #C4E2FE;
+    width:1000px;
+}
+
+div.ninja{
+    display: block;
+}
+
+.ninja img{
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 5px;
+}
