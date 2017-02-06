@@ -26,7 +26,7 @@ users = {
 for key in users:
     print key
     index = 1
-    for data in key:
+    for data in users[key]:
         name_len = len(data["first_name"]) + len(data["last_name"])
         print index, "-", data["first_name"], data["last_name"], "-", name_len
         index += 1
