@@ -10,6 +10,3 @@ List of sub-modules:
 6. jQuery
 7. Yellow Belt Hackathon: Build a loading screen for a fighting game
 8. Web Fundamentals (Optional)
-  - Pacman Game
-  - Wireframe
-  - jQuery UI
