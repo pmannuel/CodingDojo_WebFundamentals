@@ -8,7 +8,7 @@ List of sub-modules:
 4. JavaScript
 5. APIs and AJAZ
 6. jQuery
-7. Ywllow Belt Hackathon: Build a loading screen for a fighting game
+7. Yellow Belt Hackathon: Build a loading screen for a fighting game
 8. Web Fundamentals (Optional)
   - Pacman Game
   - Wireframe
