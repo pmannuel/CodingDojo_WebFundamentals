@@ -6,7 +6,7 @@ List of sub-modules:
 - CSS
 - Git
 - JavaScript
-- APIs and AJAZ
+- APIs and AJAX
 - jQuery
 - Yellow Belt Hackathon: Build a loading screen for a fighting game
 - Web Fundamentals (Optional)
